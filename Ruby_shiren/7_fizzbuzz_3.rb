@@ -4,15 +4,12 @@
 # 1から `n` までの数字を順に出力する
 # 3の倍数なら`Fizz`、5の倍数なら`Buzz`、15の倍数なら`FizzBuzz`を、数字の代わりに出力する
 
-# pattern2（case文を使った場合の条件分岐）
+# pattern3（三項演算子）
 def fizzbuzz(n)
   (1..n).each do |i|
-    case
-    when i % 15 == 0 then puts "FizzBuzz"
-    when i % 5 == 0  then puts "Buzz"
-    when i % 3 == 0  then puts "Fizz"
-    else puts i
-    end
+    puts (i % 15 == 0) ? "FizzBuzz" :
+         (i % 5 == 0)  ? "Buzz" :
+         (i % 3 == 0)  ? "Fizz" : i
   end
 end
 
